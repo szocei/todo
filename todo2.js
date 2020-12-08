@@ -19,7 +19,7 @@ function checkTodos() {
   }
   let html = "";
   todos.forEach((todo, index) => {
-    html += `<div class='card'><div class='deldiv' onclick='removeTodo(${index});'>X</div>${todo}</div>`;
+    html += `<section class='sect'><input type='checkbox' name='check' id='check'><div class='card'><div class='deldiv' onclick='removeTodo(${index});'>X</div>${todo}</div></section>`;
   });
   $(".incomplete").empty().append(html);
   document.querySelector('.db').innerHTML=todos.length;
