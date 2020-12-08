@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To Do List</title>
+    <link rel="stylesheet" href="todo2.css">
+    <link rel="manifest" href="./manifest.json">
+
+</head>
+<body>
+    <h1>Daily To-Do list manager </h1>
+    <div class="main">
+        <div class="div__day"></div>
+        <div class="div__date"></div>
+
+
+        
+        <div class="cim">
+            <input type="text" placeholder="Take the garbage out" id="todo">
+        <button class="btn__uj" onclick="letrehoz()">+</button> 
+        </div>
+      
+        <p class="text-info">You have <span class="db"></span>  pending items</p>
+        <div class="container">
+          <!-- incomplete todo -->
+          <div class="incomplete"></div>
+        </div>
+      </div> 
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">  </script>
+      <script src="todo2.js">  </script>
+</body>
+</html>
