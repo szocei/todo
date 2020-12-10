@@ -97,21 +97,30 @@ padding: 0px;
     font-size: 22px;
   }
   .card:hover  .deldiv{
-    background-color: rgb(146, 143, 143);
-    color: red;
+    color: rgb(32, 30, 30);
     font-weight: 600;
     text-align: center;
     font-size: 30px;
     margin-top: -5px;
-   }
+    animation-name: example;
+    animation-duration: 1s;
+    background-color: rgb(235, 22, 22);
+    
+  }
+  
+  @keyframes example {
+    from {background-color: rgb(8, 8, 8);}
+    to {background-color: rgb(235, 22, 22);}
+  }
+   
 
   .deldiv {
       background-color:  rgb(58, 58, 58);
-      width: 20px;
+      width: 80px;
       float: right;
       cursor: pointer;
       color:  rgb(58, 58, 58);
-      width: 3rem;
+      
       height: auto;
 
   }

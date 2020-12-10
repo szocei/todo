@@ -24,7 +24,7 @@ function checkTodos() {
   }
   let html = "";
   todos.forEach((todo, index) => {
-    html += `<section class='sect'><input type='checkbox' name='check' id='check'><div class='card'><div class='deldiv' onclick='removeTodo(${index});'>X</div>${todo}</div></section>`;
+    html += `<input type='checkbox' name='check' id='check'><div class='card'><div class='deldiv' onclick='removeTodo(${index});'><i class='fa fa-trash'></i></div>${todo}</div>`;
   });
   $(".incomplete").empty().append(html);
   document.querySelector('.db').innerHTML=todos.length;
