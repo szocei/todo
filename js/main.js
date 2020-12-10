@@ -4,7 +4,12 @@ checkTodos();
     const nowDate=new Date();
     const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     document.querySelector('.div__day').textContent=days[nowDate.getDay()];
-    document.querySelector('.div__date').textContent=`${nowDate.getDate()}-${nowDate.getMonth()}-${nowDate.getFullYear()}`;
+    const day=[
+      nowDate.getDate(),
+      nowDate.getMonth()+1,
+      nowDate.getFullYear()
+      ].map(num => num < 10 ? `0${num}` : num);
+      document.querySelector('.div__date').textContent=day.join('-');
 }
 )();
 
