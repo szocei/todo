@@ -15,25 +15,41 @@ checkTodos();
 
 function checkTodos() {
   let dataInLocalStorage = localStorage.getItem("todos");
-   
   if (dataInLocalStorage == null) {
-    todos = [];
-    document.querySelector('.db').innerHTML='0';
-  } else {
+            todos = [];
+          } else {
     todos = JSON.parse(dataInLocalStorage);
-  }
+   
+      }
   let html = "";
   todos.forEach((todo, index) => {
-    html += `<input type='checkbox' name='check' id='check'><div class='card'><div class='deldiv' onclick='removeTodo(${index});'><i class='fa fa-trash'></i></div>${todo}</div>`;
+    html += `<div class='div__todo'><input type='checkbox' name='check' id='check'><div class='card'><div class='deldiv' onclick='removeTodo(${index});'><i class='fa fa-trash'></i></div>${todo}</div></div>`;
   });
   $(".incomplete").empty().append(html);
   document.querySelector('.db').innerHTML=todos.length;
+  if(todos.length<1){
+    urespage()
+  }else{
+    telipage()
+  }
+  
 };
 
+function telipage(){
+  let ures=document.querySelector('#ures');
+  ures.classList.add('div__ures--hide');
+  document.querySelector('.text-info').classList.remove('div__ures--hide');
+  }
+//urespage();
+function urespage(){
+  let ures=document.querySelector('#ures');
+  ures.classList.remove('div__ures--hide');
+  document.querySelector('.text-info').classList.add('div__ures--hide');
+}
 
 function letrehoz (){
- if ($("input").val() !== "") {
-      todo = $("input").val();
+    if ($("input").val() !== "") {
+        todo = $("input").val();
       let todosData = localStorage.getItem("todos");
       if (todosData == null) {
         todos = [];
@@ -43,7 +59,9 @@ function letrehoz (){
       todos.push(todo);
       localStorage.setItem("todos", JSON.stringify(todos));
       $("input").val("");
+      
       checkTodos();
+      telipage();
     }
 };
 
