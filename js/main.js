@@ -63,6 +63,7 @@ function letrehoz (){
       checkTodos();
       telipage();
     }
+    document.querySelector('#todo').focus();
 };
 
   let removeTodo = (index) => {
