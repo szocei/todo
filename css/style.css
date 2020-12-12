@@ -13,7 +13,7 @@
       font-size: 3rem;
       font-weight: 800;
       text-align: center;
-      margin: 30px;
+      margin: 10px;
   }
   .main {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -28,7 +28,8 @@
   }
 
 .div__ures--hide {
-visibility: hidden;
+
+display: none;
 }
 
 .ures {
@@ -38,9 +39,12 @@ visibility: hidden;
   font-weight: 600;
 
 }
-#p__icon {
-  font-size: 3rem;
-  text-align: center;
+.p__img {
+    text-align: center;
+}
+
+.img__kesz {
+max-height: 2em;
 }
 
   .cim{
@@ -109,7 +113,7 @@ padding: 0px;
     font-weight: 600;
     text-align: center;
     font-size: 30px;
-    margin-top: -5px;
+    margin-top: -5px; 
     animation-name: example;
     animation-duration: 1s;
     background-color: rgb(235, 22, 22);
@@ -135,12 +139,17 @@ padding: 0px;
   
    .show__btn, .clear__btn {
     width: 200px;
-    border-radius: 20px;
-    background-color: lightcyan ;
+    border: none;
+    background-color: gainsboro ;
     color: black;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin: 10px 15px;
+    font-weight: 700;
   }
+.clear__btn:after {
+  border: none;
+}
+
 .btn__div {
   margin-top: 2rem;
   display: flex;

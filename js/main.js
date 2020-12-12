@@ -72,4 +72,13 @@ function letrehoz (){
     localStorage.setItem("todos", JSON.stringify(todos));
     checkTodos();
   };
-
+  let removeAllTodo = () => {
+    let todosData = localStorage.getItem("todos");
+    todos = JSON.parse(todosData);
+    todos.splice(0);
+    localStorage.setItem("todos", JSON.stringify(todos));
+    checkTodos();
+    document.querySelector('#todo').focus();
+  };
+  
+  
