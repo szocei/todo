@@ -1,4 +1,5 @@
 checkTodos();
+
 //date
 (function date(){
     const nowDate=new Date();
@@ -63,7 +64,7 @@ function letrehoz (){
       checkTodos();
       telipage();
     }
-    document.querySelector('#todo').focus();
+    inputFocus();
 };
 
   let removeTodo = (index) => {
@@ -72,6 +73,7 @@ function letrehoz (){
     todos.splice(index, 1);
     localStorage.setItem("todos", JSON.stringify(todos));
     checkTodos();
+    inputFocus();
   };
   let removeAllTodo = () => {
     let todosData = localStorage.getItem("todos");
@@ -79,7 +81,9 @@ function letrehoz (){
     todos.splice(0);
     localStorage.setItem("todos", JSON.stringify(todos));
     checkTodos();
-    document.querySelector('#todo').focus();
+    inputFocus();
   };
+
+  const inputFocus=()=>document.querySelector('#todo').focus();
   
   
