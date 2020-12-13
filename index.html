@@ -3,41 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>To Do List</title>
+    <title>ToDo List</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-
 </head>
 <body>
-    <h1>Daily To-Do list manager </h1>
-    <div class="main">
+    <header>
+        <h1>Daily To-Do list manager</h1>
+      </header>
+      <div class="main">
         <div class="div__day"></div>
         <div class="div__date"></div>
+      <form>
+        <input type="text" class="todo-input" placeholder="Take the garbage out">
+        <button class="todo-button" type="submit">
+          <i class="fa fa-plus"></i>
+        </button>
+      </form>
 
+      <p class="text-info">You have <span class="db">0</span>  pending items</p>
+      <div class="ures"  id="ures">
+        <p id="p__img"> <img class="img__kesz" src="img/beer_celebration.svg" alt="Sikeresen elvégeztél mindent"> </p>            
+        <p>Time to chill.You have no todos.</p> </div>
 
-        
-        <div class="cim">
-            <input type="text" placeholder="Take the garbage out" id="todo">
-        <button class="btn__uj" onclick="letrehoz()"><i class="fa fa-plus"></i></button> 
-        </div>
-      
-        <p class="text-info">You have <span class="db"></span>  pending items</p>
-        <div class="container">
-            <div class="ures" id="ures">
-                <p id="p__img"> <img class="img__kesz" src="img/beer_celebration.svg" alt="Sikeresen elvégeztél mindent"> </p>            
-                <p>Time to chill.You have no todos.</p> </div>
-          
-          <!-- incomplete todo -->
-          <div class="incomplete"></div>
-        </div>
-        <div class="btn__div">
-        <button class="show__btn">Show Complete</button><button class="clear__btn" onclick="removeAllTodo()">Clear All</button>
+      <div class="select">
+        <select name="todos" class="filter-todo">
+          <option value="all"> all </option>
+          <option value="checked">checked</option>
+          <option value="going">going</option>
+        </select>
+      </div>
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div> 
+       <div class="btn__div">
+        <button class="show__btn">Show Complete</button><button class="clear__btn" >Clear All</button>
      </div>
     </div>
-      </div> 
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">  </script>
-      <script src="js/main.js">  </script>
+      <script src="js/main.js"></script>
 </body>
 </html>
