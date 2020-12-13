@@ -26,20 +26,23 @@
         <p id="p__img"> <img class="img__kesz" src="img/beer_celebration.svg" alt="Sikeresen elvégeztél mindent"> </p>            
         <p>Time to chill.You have no todos.</p> </div>
 
-      <div class="select">
-        <select name="todos" class="filter-todo">
-          <option value="all"> all </option>
-          <option value="checked">checked</option>
-          <option value="going">going</option>
-        </select>
-      </div>
+      
       <div class="todo-container">
         <ul class="todo-list"></ul>
       </div> 
        <div class="btn__div">
-        <button class="show__btn">Show Complete</button><button class="clear__btn" >Clear All</button>
+        <div class="select">
+          <select name="todos" class="filter-todo">
+            <option value="checked">Show Completed</option>
+            <option value="all"> All ToDo </option>
+            <option value="going">Hide Completed </option>
+          </select>
+        </div>
+        <button class="clear__btn" >Clear All</button>
      </div>
     </div>
       <script src="js/main.js"></script>
 </body>
 </html>
+
+
